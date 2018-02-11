@@ -48,7 +48,46 @@ My response measure seems to be a reasonable guess since it is hard to get an es
 hands on the toolkit and dig deeper into the source code.
 
 ### Use Case Scenario Investigation
-In order to generate a basic three-sinusoids-plot as introduced in The Toyplot Tutorial[2] using the 
-toolkit, it requires these steps to get the following result:
+In order to generate a basic three-sinusoids-plot as introduced in [The Toyplot Tutorial](https://toyplot.readthedocs.io/en/stable/tutorial.html) 
+using the toolkit, it requires these steps to get the following result:
 
-![alt text](https://raw.githubusercontent.com/SiRumCz/csc485aMD/master/a1_1.png)
+![user case scenario](https://raw.githubusercontent.com/SiRumCz/csc485aMD/master/a1_1.png)
+
+In the scenario above, my main focus will be on [canvas](https://github.com/sandialabs/toyplot/blob/master/toyplot/canvas.py) file because it 
+essentially creates a [Canvas](https://github.com/sandialabs/toyplot/blob/a4b589c6820b86653f22030a99f692550f833b01/toyplot/canvas.py#L163) 
+class and calls [cartesian](https://github.com/sandialabs/toyplot/blob/a4b589c6820b86653f22030a99f692550f833b01/toyplot/canvas.py#L405) 
+function. 
+
+When initialize the class, it only assigns basic width and height for the canvas, therefore it is an 
+instant event. After having the canvas of the plot, it uses the cartesian function to add a set of 
+Cartesian axes to the canvas which is also an instant event because it creates a 
+[Cartesian](https://github.com/sandialabs/toyplot/blob/a4b589c6820b86653f22030a99f692550f833b01/toyplot/coordinates.py#L613) class from 
+[coordinates](https://github.com/sandialabs/toyplot/blob/master/toyplot/coordinates.py) which looks 
+alike to Canvas class. Now that I can see the only part that could be time consuming is to add different 
+sinusoids to the plot, and since the scenario only takes three marks, thus it will not take 
+more than 0.5 seconds to process and render the plot.
+
+### Growth Scenario
+
+Now we consider increase the performance of the toolkit by increasing sinusoid number in the plot from 3 
+to 5000 and analyze the performance to see if the low latency requirement can be satisfied or not.
+
+| Aspect | Details |
+|--------|---------|
+|Scenario Name | Low latency on task performance |
+|Business Goals | Efficient process speed to ensure user having low latency experience |
+| Quality Attributes | Performance | 
+| Stimulus | Need for generating a plot with 5000 sinusoids from user |
+| Stimulus Source | User and function in that module being called | 
+| Response | Display the generated plot |
+| Response Measure | < 0.5s process and render capability |
+
+### Growth Scenario Investigation
+
+It mainly relies on its data handling ability to add 5000 data into to the plot. From the inspection of the 
+source code, [Cartesian.plot](https://github.com/sandialabs/toyplot/blob/a4b589c6820b86653f22030a99f692550f833b01/toyplot/coordinates.py#L1793) 
+function is in charge to plot data into the canvas once upon each call. In that function it contains 
+essentially mapping of its attributes and thus adding more sinusoid seems to be at a linear growth rate. 
+Therefore for a task such that generates a plot with 5000 sinusoid might be able to have processing 
+and rendering time lower than 0.5 seconds, but as the expansion of the data required, the more processing 
+and rendering time is also required and eventually exceed the response measure.
