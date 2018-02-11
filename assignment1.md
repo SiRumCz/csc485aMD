@@ -51,4 +51,4 @@ hands on the toolkit and dig deeper into the source code.
 In order to generate a basic three-sinusoids-plot as introduced in The Toyplot Tutorial[2] using the 
 toolkit, it requires these steps to get the following result:
 
-[img]https://github.com/SiRumCz/csc485aMD/blob/master/a1_1.png[/img]
+([img]https://github.com/SiRumCz/csc485aMD/blob/master/a1_1.png[/img])
