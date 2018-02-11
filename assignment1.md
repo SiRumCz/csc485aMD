@@ -1,8 +1,6 @@
----
-Student: Zhe(Kevin) Chen
-Student number: V00819544
-Date: Feb 03, 2018
----
+#### Student: Zhe(Kevin) Chen
+#### Student number: V00819544
+#### Date: Feb 03, 2018
 
 <h1 align="center">Toyplot</h1>
 
