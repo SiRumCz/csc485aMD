@@ -21,7 +21,8 @@ project source code realizes this scenario. Provide discussion on how the projec
 this scenario in the future.
 
 ## Introduction
-Toyplot[1] is an open-source python library from Sandia National Laboratories that develops beautiful 
+[Toyplot](http://toyplot.readthedocs.io/en/stable/) 
+is an open-source python library from Sandia National Laboratories that develops beautiful 
 interactive, animated plots that embrace the unique capabilities of electronic publishing and 
 support reproducibility. It creates the possible data graphics out-of-the-box, maximizing data ink and 
 minimizing chartjunk. It also comes with minimalist interface for engineers and scientists to explode.
