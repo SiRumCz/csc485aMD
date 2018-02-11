@@ -1,6 +1,6 @@
 ---
-Zhe(Kevin) Chen
-V00819544
+Author: Zhe(Kevin) Chen
+Student number: V00819544
 ---
 
 <h1 align="center">Toyplot</h1>
