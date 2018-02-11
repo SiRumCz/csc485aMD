@@ -10,10 +10,10 @@ Date: Feb 03, 2018
 1. [Assignment Overview](#assignment-overview)
 2. [Introduction](#introduction)
 3. [Quality Attribute Scenarios](#quality-attribute-scenarios)
-	3.1. [Use Case Scenario](#use-case-scenario)
-	3.2. [ Use Case Scenario Investigation](#use-case-scenario-investigation)
-	3.3. [Growth Scenario](#growth-scenario)
-	3.4. [Growth Scenario Investigation](#growth-scenario-investigation)
+	1. [Use Case Scenario](#use-case-scenario)
+	2. [ Use Case Scenario Investigation](#use-case-scenario-investigation)
+	3. [Growth Scenario](#growth-scenario)
+	4. [Growth Scenario Investigation](#growth-scenario-investigation)
 
 ## Assignment Overview
 For target project, pick a quality attribute, create a quality attribute scenario, and document how the 
