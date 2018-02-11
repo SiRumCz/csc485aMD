@@ -5,11 +5,14 @@ Student number: V00819544
 
 <h1 align="center">Toyplot</h1>
 
-# Table of Contents
-1. [Example](#example)
-2. [Example2](#example2)
-3. [Third Example](#third-example)
+## Table of Contents
+1. [Assignment Overview](#assignment-overview)
+2. [Introduction](#introduction)
+3. [Quality Attribute Scenarios](#quality-attribute-scenarios)
 
-## Example
-## Example2
-## Third Example
+## Assignment Overview
+
+## Introduction
+
+## Quality Attribute Scenarios
+
