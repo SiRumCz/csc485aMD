@@ -10,6 +10,10 @@ Date: Feb 03, 2018
 1. [Assignment Overview](#assignment-overview)
 2. [Introduction](#introduction)
 3. [Quality Attribute Scenarios](#quality-attribute-scenarios)
+3.1.1 [Use Case Scenario](#use-case-scenario)
+3.1.2 [ Use Case Scenario Investigation](#use-case-scenario-investigation)
+3.1.3 [Growth Scenario](#growth-scenario)
+3.1.4 [Growth Scenario Investigation](#growth-scenario-investigation)
 
 ## Assignment Overview
 For target project, pick a quality attribute, create a quality attribute scenario, and document how the 
@@ -28,6 +32,7 @@ investigations based on one chosen quality attribute.
 
 ## Quality Attribute Scenarios
 ### Use Case Scenario
+
 In the section I choose quality attribute Performance and create a simple scenario for Toyplot as it is 
 basically a plotting toolkit, the most common use case is related to how it performs.
 
@@ -48,6 +53,7 @@ My response measure seems to be a reasonable guess since it is hard to get an es
 hands on the toolkit and dig deeper into the source code.
 
 ### Use Case Scenario Investigation
+
 In order to generate a basic three-sinusoids-plot as introduced in [The Toyplot Tutorial](https://toyplot.readthedocs.io/en/stable/tutorial.html) 
 using the toolkit, it requires these steps to get the following result:
 
